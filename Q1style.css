@@ -1,0 +1,60 @@
+.header{
+    background-color: gray;
+
+}
+
+.titleName{
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 100px;
+    padding-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+    height: 150px;
+    font-size: 50px;
+}
+
+.column{
+    background-color: #66CC99;
+    width: 250px; 
+}
+
+.main{
+    display: flex;
+}
+
+.text{
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+p{
+    padding-left: 35px;
+    padding-right: 15px;
+    word-wrap: break-word;
+}
+
+.heading{
+    background-color: rgba(205, 203, 203, 0.619);
+    height: 35px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+hr{
+    width: 200px;
+}
+
+.coltext{
+    padding: 10px;
+}
+
+.page{
+    width: 900px;
+    margin: auto;
+    box-shadow: 15px 15px rgba(128, 128, 128, 0.157);
+}
