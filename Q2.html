@@ -7,29 +7,34 @@
     </head>
     <body>
         <div>
-            <div class="topbar">
-                <img src="pphlogo.png" width="15%" class="logo">
-                <div class="right">
-                    <button class="search">SEARCH</button>
-                    <a href="#">HOW IT WORKS</a>
-                    <a href="#">LOGIN</a>
-                    <a href="#">SIGNUP</a>
-                    <a href="#" style="color: #E7950A;">FREELANCER?</a>
-                </div>
+            <img src="pphlogo.png" width="15%" class="logo">
+            <div class="hamburger-menu" onclick="toggleNav()">
+                &#9776;
             </div>
-            <div class="topnav">
-                <a class="active" href="#">Technology & Programming</a>
-                <a href="#">Writing & Translation</a>
-                <a href="#">Design</a>
-                <a href="#">Digital Marketing</a>
-                <a href="#">Video, Photo & Image</a>
-                <a href="#">Business</a>
-                <a href="#">Music & Audio</a>
-                <a href="#">Marketing, Branding & Sales</a>
-                <a href="#">Social Media</a>
-                <a href="#">Music & Audio</a>
-                <a href="#">Marketing, Branding & Sales</a>
-                <a href="#">Business</a>
+            <div class="right" id="right">
+                <button class="search">SEARCH</button>
+                <a href="#">HOW IT WORKS</a>
+                <a href="#">LOGIN</a>
+                <a href="#">SIGNUP</a>
+                <a href="#" style="color: #E7950A;">FREELANCER?</a>
+            </div>
+            <div class="nav">
+                <button class="leftarrow" onclick="slideLeft()">&#8592;</button>
+                <div class="topnav">
+                    <a href="#">Technology & Programming</a>
+                    <a href="#">Writing & Translation</a>
+                    <a href="#">Design</a>
+                    <a href="#">Digital Marketing</a>
+                    <a href="#">Video, Photo & Image</a>
+                    <a href="#">Business</a>
+                    <a href="#">Music & Audio</a>
+                    <a href="#">Marketing, Branding & Sales</a>
+                    <a href="#">Social Media</a>
+                    <a href="#">Music & Audio</a>
+                    <a href="#">Marketing, Branding & Sales</a>
+                    <a href="#">Business</a>
+                </div>
+                <button class="rightarrow" onclick="slideRight()">&#8594;</button>
             </div>
             <div class="textmain">
                 <div class="heading">
@@ -46,5 +51,27 @@
                 <img src="/mainweb.png" width="100%">
             </div>
         </div>
+
+        <script>
+            function toggleNav() {
+                var right = document.getElementById("right");
+                right.classList.toggle("responsive");
+                if (right.classList.contains("responsive")) {
+                    document.querySelector(".menu").style.right = "0";
+                } else {
+                    document.querySelector(".menu").style.right = "-100%";
+                }
+            }
+
+            function slideLeft() {
+                var topnav = document.querySelector(".topnav");
+                topnav.scrollLeft -= 50; // Adjust the scroll amount as needed
+            }
+
+            function slideRight() {
+                var topnav = document.querySelector(".topnav");
+                topnav.scrollLeft += 50; // Adjust the scroll amount as needed
+            }
+        </script>
     </body>
 </html>
