@@ -19,17 +19,31 @@ document.getElementById('jobApplicationForm').addEventListener('submit', functio
     const email = document.getElementById('email').value;
     const zip = document.getElementById('zip').value;
     const form = document.getElementById('jobApplicationForm');
+    const gradyear = document.getElementById('grad');
+    const empdate = document.getElementById('date');
+    const startDate = document.getElementById('startDate');
+    const refnum = document.getElementById('refContact');
+    const refname = document.getElementById('refName');
+    const companyname = document.getElementById('company');
 
     if (!textformat(firstName)){
-        alert('Please enter only alphabets for name');
+        alert('Please enter only alphabets for your name');
     }
 
     if (!textformat(lastName)){
-        alert('Please enter only alphabets for name');
+        alert('Please enter only alphabets for your name');
+    }
+
+    if (!textformat(refname)){
+        alert('Please enter only alphabets for reference name');
+    }
+
+    if (!textformat(companyname)){
+        alert('Please enter only alphabets for company name');
     }
 
     if (!phoneformat(phoneNumber)){
-        alert('Please enter phone number in valid format');
+        alert('Please enter your phone number in valid format 0xxxxxxxxx');
     }
     
     if (!emailformat(email)){
@@ -40,6 +54,22 @@ document.getElementById('jobApplicationForm').addEventListener('submit', functio
         alert('Please enter only 5 digits for zipcode');
     }
 
+    if (!yearformat(gradyear)){
+        alert('Please enter a valid 4 digit year')
+    }
+
+    if(!dateformat(empdate)){
+        alert('Please enter a valid employement date DD-MM-YY')
+    }
+
+    if(!dateformat(startDate)){
+        alert('Please enter a valid start date DD-MM-YY')
+    }
+
+    if (!phoneformat(refnum)){
+        alert('Please enter reference phone number in valid format 0xxxxxxxxx');
+    }
+
     const formData = new FormData(form);
 
     const data = {};
@@ -47,8 +77,8 @@ document.getElementById('jobApplicationForm').addEventListener('submit', functio
         data[key] = value;
     });
     console.log(data);
-
     console.log('Form submitted successfully.');
+    form.reset();
 });
 
 function textformat(name) {
@@ -71,6 +101,16 @@ function zipformat(zipCode) {
     return regex.test(zipCode);
 }
 
+function yearformat(year) {
+    const regex = /^\d{4}$/;
+    return regex.test(year);
+}
+
+function dateFormat(date) {
+    const dateRegex = /^\d{2}-\d{2}-\d{4}$/;
+    return dateRegex.test(date);
+}
+
 document.getElementById('viewtablebtn').addEventListener('click', function() {
     const form = document.getElementById('jobApplicationForm');
     const formData = new FormData(form);
@@ -80,6 +120,7 @@ document.getElementById('viewtablebtn').addEventListener('click', function() {
     });
     const tableDiv = document.getElementById('table');
     tableDiv.innerHTML = `
+    <div style="overflow-x: auto;">
         <table>
             <thead>
                 <tr>
@@ -112,7 +153,7 @@ document.getElementById('viewtablebtn').addEventListener('click', function() {
                     <td>${data.number}</td>
                     <td>${data.street} ${data.city} ${data.state} ${data.zip}</td>
                     <td>${data.resume ? 'Uploaded' : 'Not provided'}</td>
-                    <td>${data.coverLetter ? 'Provided' : 'Not provided'}</td>
+                    <td>${data.coverLetter}</td>
                     <td>${data.highedu}</td>
                     <td>${data.uniname}</td>
                     <td>${data.major}</td>
@@ -130,5 +171,6 @@ document.getElementById('viewtablebtn').addEventListener('click', function() {
                 </tr>
             </tbody>
         </table>
+    </div>
     `;
 });

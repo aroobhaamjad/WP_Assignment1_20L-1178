@@ -75,8 +75,3 @@ h1{
     font-style: oblique;
     color: #21BEB3;
 }
-
-.table{
-    overflow-x: auto;
-    max-width: 100%;
-}
