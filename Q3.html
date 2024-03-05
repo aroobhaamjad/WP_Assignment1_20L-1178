@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="Q3style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Job Application Form</h1>
+    <form id="jobApplicationForm">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number:</label>
+                <input type="text" id="number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Resume and Cover Letter</legend>
+            <div class="form-group">
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="form-group">
+                <label for="coverLetter">Cover Letter:</label>
+                <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <div class="form-group">
+                <label for="highedu">Highest Education:</label>
+                <input type="text" id="highedu" name="highedu" required>
+            </div>
+            <div class="form-group">
+                <label for="uniname">University:</label>
+                <input type="text" id="uniname" name="uniname" required>
+            </div>
+            <div class="form-group">
+                <label for="major">Major:</label>
+                <input type="text" id="major" name="major" required>
+            </div>
+            <div class="form-group">
+                <label for="grad">Graduation Year:</label>
+                <input type="text" id="grad" name="grad" required>
+            </div>
+            <div class="form-group">
+                <label for="emp">Employement History:</label>
+                <textarea id="emp" name="emp" rows="6" required></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Previous Job Titles</legend>
+            <div class="job-entry">
+                <div class="form-group">
+                    <label for="company">Company Name:</label>
+                    <input type="text" class="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Employment Date:</label>
+                    <input type="text" class="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="resp">Responsibilities:</label>
+                    <textarea class="resp" name="resp" rows="3" required></textarea>
+                </div>
+            </div>
+            <button type="button" id="addJob">Add</button>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Skills</legend>
+                <div class="form-group">
+                    <label for="skill">Skills:</label>
+                    <input type="text" class="skill" name="skill" required>
+                </div>
+                <div class="form-group">
+                    <label for="certificate">Certificates:</label>
+                    <input type="text" class="certificate" name="certificate" required>
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Availability</legend>
+                <div class="form-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="text" class="startDate" name="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="schedule">Preferred Work Schedule:</label>
+                    <input type="text" class="schedule" name="schedule" required>
+                </div>
+                <div class="form-group">
+                    <label for="resp">Willing To Relocate:</label>
+                    <input type="radio" id="yes" name="relocate" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="relocate" value="no">
+                    <label for="no">No</label>
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>References</legend>
+            <div class="reference-entry">
+                <div class="form-group">
+                    <label for="refName">Reference Name:</label>
+                    <input type="text" class="refName" name="refName" required>
+                </div>
+                <div class="form-group">
+                    <label for="refContact">Reference Contact Info:</label>
+                    <input type="text" class="refContact" name="refContact" required>
+                </div>
+                <div class="form-group">
+                    <label for="refRelationship">Reference Relationship:</label>
+                    <input type="text" class="refRelationship" name="refRelationship" required>
+                </div>
+            </div>
+            <button type="button" id="addReference">Add</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Questions</legend>
+                <div class="form-group">
+                    <label for="why">Why Do You Want To Work For Us:</label>
+                    <textarea class="why" name="why" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="why1">Why Should We Hire You:</label>
+                    <textarea class="why1" name="why1" rows="3" required></textarea>
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Consent and Agreement</legend>
+            <div class="form-group">
+                <input type="checkbox" id="termsCheckbox" name="termsCheckbox" required>
+                <label for="termsCheckbox">I agree to the terms and conditions</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="privacyCheckbox" name="privacyCheckbox" required>
+                <label for="privacyCheckbox">I acknowledge the privacy policy</label>
+            </div>
+        </fieldset>
+        
+
+        <button type="submit">Submit Application</button>
+        <button id="viewtablebtn">View Form As Table</button>
+    </form>
+
+    <div id="table"></div>
+</div>
+
+<script src="Q3.js"></script>
+</body>
+</html>

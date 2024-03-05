@@ -1,0 +1,82 @@
+body {
+    background-image: url('bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #21BEB3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+button{
+    background-color: #21BEB3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);;
+    border:1px solid #21BEB3;
+    border-radius: 5px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #21BEB3;
+}
+
+th {
+    background-color: #f2f2f280;
+}
+
+fieldset{
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px rgba(128, 128, 128, 0.397) solid;
+}
+
+input[type="text"], textarea{
+    width: calc(100% - 20px);;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px rgba(128, 128, 128, 0.397) solid;
+    margin-top: 5px;
+}
+
+legend{
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h1{
+    text-align: center;
+    font-style: oblique;
+    color: #21BEB3;
+}
+
+.table{
+    overflow-x: auto;
+    max-width: 100%;
+}
